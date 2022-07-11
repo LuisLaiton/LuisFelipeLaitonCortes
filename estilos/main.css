@@ -1,0 +1,37 @@
+body {
+    background-color:rgb(21, 36, 52);
+    margin: 100px;
+    margin-top: 0px;
+}
+
+header{
+    background-image: url("../imagenes/portada.jpeg");
+    background-position: right;
+    height: 284px;
+}
+
+.titulo{
+    font-style: italic;
+    font-size: 25px;
+    padding: 20px;
+    width: 350px;
+    margin: 0px;
+    color: black;
+    background-color: white;
+
+    font-family: cursive;
+}
+
+img.logo{
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.info{
+    padding: 20px;
+    width: 350px;
+    margin: 0px;
+    color: black;
+    background-color: white;
+    font-family: sans-serif;
+}
