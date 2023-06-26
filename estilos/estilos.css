@@ -1,3 +1,12 @@
+:root {
+    --principal: #08415C;
+    --principal-oscuro: #123343;
+    --secundario: #F66B0E;
+    --blanco-neutro: #EEE5E9;
+    --blanco-oscuro: #6B818C;
+    --negro: #262626;
+}
+
 @font-face {
     font-family: 'Averia Serif Libre';
     src: url('fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf');
@@ -20,21 +29,22 @@ h6 {
 
 .fondo--naranja {
     display: inline;
-    background-color: #F66B0E;
-    color: black;
+    background-color: var(--secundario);
+    color: var(--negro);
 }
 
 hr {
-    border: 2px solid #F66B0E;
+    border: 2px solid var(--secundario);
 }
 
 /*--- HEADER ---*/
 .header {
-    background-color: #EEE5E9;
+    background-color: var(--blanco-neutro);
     display: grid;
     grid-template-columns: 35% auto;
     grid-template-rows: auto;
     min-height: 300px;
+    color: var(--negro);
 }
 
 .header__figura {
@@ -47,7 +57,7 @@ hr {
     max-width: 250px;
     width: 90%;
     float: right;
-    border-left: 30px solid #f66b0e;
+    border-left: 30px solid var(--secundario);
 }
 
 .titulo {
@@ -64,8 +74,8 @@ hr {
 
 /*--- MAIN ---*/
 .main {
-    background-color: #123343;
-    color: #EEE5E9;
+    background-color: var(--principal-oscuro);
+    color: var(--blanco-neutro);
     display: grid;
     grid-template-columns: 35% auto;
     grid-auto-rows: auto;
@@ -74,7 +84,7 @@ hr {
 .educacion {
     grid-column: 1;
     grid-row: 1/3;
-    background-color: #08415C;
+    background-color: var(--principal);
     padding: 20% 10% 10% 10%;
 }
 
@@ -98,11 +108,11 @@ hr {
 
 .estrellas {
     display: inline;
-    color: #6B818C;
+    color: var(--blanco-oscuro);
 }
 
 .estrella--naranja {
-    color: #F66B0E;
+    color: var(--secundario);
 }
 
 /*--- MAIN exp laboral ---*/
@@ -111,16 +121,16 @@ hr {
 }
 
 .parrafo--opaco {
-    color: #6B818C;
+    color: var(--blanco-oscuro);
 }
 
 /*--- MAIN pasatiempos ---*/
 .pasatiempos__enlace {
-    color: #F66B0E;
+    color: var(--secundario);
 }
 
 .borde--blanco {
-    border: 2px solid #EEE5E9;
+    border: 2px solid var(--blanco-neutro);
 }
 
 /*--- FOOTER ---*/
@@ -137,7 +147,7 @@ hr {
 
 .no--link {
     text-decoration: none;
-    color: black;
+    color: var(--negro);
 }
 
 @media screen and (max-width: 768px) {
@@ -157,7 +167,7 @@ hr {
         grid-column: 1/-1;
         grid-row: 3;
         padding: 10%;
-        background-color: #08415C;
+        background-color: var(--principal);
     }
 
     .footer__label {
