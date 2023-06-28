@@ -102,6 +102,29 @@ hr {
 }
 
 /*--- MAIN educacion ---*/
+.certificado__info:hover {
+    color: var(--blanco-oscuro);
+}
+
+.diploma {
+    background-color: var(--negro);
+    padding: 1%;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    position: absolute;
+    top: 2%;
+}
+
+.diploma__img {
+    width: 100%;
+}
+
+.diploma__salir {
+    position: relative;
+    left: 90%;
+}
+
 .dos--columnas {
     display: inline-block;
     width: 49%;
@@ -186,6 +209,7 @@ hr {
     h1 {
         font-size: 1.7rem;
     }
+
     h2 {
         font-size: 1.5rem;
     }
