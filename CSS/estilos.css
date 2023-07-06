@@ -102,27 +102,22 @@ hr {
 }
 
 /*--- MAIN educacion ---*/
-.certificado__info:hover {
+.certificado:hover {
     color: var(--blanco-oscuro);
+    cursor: pointer;
 }
 
 .diploma {
-    background-color: var(--negro);
-    padding: 1%;
-    border-radius: 5px;
-    width: 80%;
-    max-width: 500px;
-    position: absolute;
-    top: 2%;
+    display: none;
+}
+
+.diploma--mostrar {
+    display: block;
 }
 
 .diploma__img {
     width: 100%;
-}
-
-.diploma__salir {
-    position: relative;
-    left: 90%;
+    border-radius: 5px;
 }
 
 .dos--columnas {
