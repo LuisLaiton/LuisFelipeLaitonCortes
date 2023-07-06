@@ -155,18 +155,17 @@ hr {
 /*--- FOOTER ---*/
 .footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 1% 0%;
-}
-
-.footer__logo {
-    filter: grayscale(100%);
-    width: 40px;
 }
 
 .no--link {
     text-decoration: none;
-    color: var(--negro);
+    color: var(--principal-oscuro);
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -196,7 +195,7 @@ hr {
     }
 
     .footer__label {
-        display: none !important;
+        display: none;
     }
 }
 
