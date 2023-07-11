@@ -31,6 +31,11 @@ hr {
     border: 2px solid var(--secundario);
 }
 
+/*--- NAV ---*/
+.navBar {
+    display: none;
+}
+
 /*--- HEADER ---*/
 .header {
     background-color: var(--blanco-neutro);
@@ -102,7 +107,7 @@ hr {
 }
 
 /*--- MAIN educacion ---*/
-.certificado:hover {
+.mostrar--hover:hover {
     color: var(--blanco-oscuro);
     cursor: pointer;
 }
@@ -168,9 +173,42 @@ hr {
     gap: 10px;
 }
 
+.texto--naranja:hover {
+    color: var(--secundario);
+}
+
 @media screen and (max-width: 1100px) {
     .header {
         grid-template-rows: 150px auto;
+    }
+
+    .navBar {
+        display: flex;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        padding: 10px 2% 5px;
+        flex-direction: column;
+        align-items: end;
+        background-color:#eee5e9b8;
+        border-bottom-left-radius: 5px;
+    }
+
+    .navBar__item {
+        color: var(--principal-oscuro);
+        text-decoration: none;
+    }
+
+    .navBar__enlaces {
+        display: none;
+        margin-top: 5px;
+    }
+
+    .navBar__enlaces--desplegable {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 5px;
     }
 }
 
