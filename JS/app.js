@@ -7,6 +7,6 @@ $DIPLOMA.forEach(element => {
 function diploma(event) {
 
     event.preventDefault();
-    const $CERTIFICADO = event.currentTarget.querySelector(".diploma");
-    $CERTIFICADO.classList.toggle('diploma--mostrar');
+    const $CERTIFICADO = event.currentTarget.querySelector(".d-oculto");
+    $CERTIFICADO.classList.toggle('d-mostrar');
 }

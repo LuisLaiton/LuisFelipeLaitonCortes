@@ -107,11 +107,11 @@ hr {
     cursor: pointer;
 }
 
-.diploma {
+.d-oculto {
     display: none;
 }
 
-.diploma--mostrar {
+.d-mostrar {
     display: block;
 }
 
