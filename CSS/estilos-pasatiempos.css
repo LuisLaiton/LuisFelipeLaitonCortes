@@ -1,6 +1,7 @@
 section {
     padding: 50px 10% 0px;
 }
+
 .main {
     display: block;
 }
@@ -11,33 +12,6 @@ section {
 
 .navBar {
     display: block;
-    background-color: var(--negro);
-    padding: 10px 10%;
-    position: sticky;
-    top:0px;
-    border-radius: 0px;
-}
-
-.navBar__menu-hamburguesa {
-    display: none;
-}
-
-.navBar__enlaces {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.navBar__enlaces--desplegable {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    align-items: end;
-}
-
-.navBar__item {
-    color: var(--blanco-neutro);
-    text-decoration: none;
 }
 
 .fotos {
@@ -77,6 +51,7 @@ section {
         position: sticky;
         top: 10px;
     }
+
     .header {
         grid-template-columns: auto;
         grid-template-rows: repeat(2, auto);
@@ -99,24 +74,5 @@ section {
 
     .navBar {
         display: flex;
-        flex-direction: column;
-        align-items: end;
-    }
-
-    .navBar__menu-hamburguesa {
-        display: block;
-        color: var(--blanco-neutro);
-    }
-
-    .navBar__enlaces {
-        display: none;
-        margin-top: 20px;
-    }
-
-    .navBar__enlaces--desplegable {
-        display: flex;
-        flex-direction: column;
-        text-align: right;
-        align-items: end;
     }
 }
