@@ -49,7 +49,7 @@ hr {
 }
 
 .enfasis:hover {
-    transform: scale(1.1);
+    transform: scale(1.3);
 }
 
 .navBar__menu-hamburguesa {
@@ -96,7 +96,7 @@ hr {
 }
 
 .contenedor__visible {
-    opacity: 1; /* Become visible */
+    opacity: 1;
 }
 
 .header__imagen {
@@ -106,15 +106,30 @@ hr {
     filter: drop-shadow(5px 5px 10px var(--blanco-oscuro));
 }
 
+.header__texto {
+    padding: 0 5%;
+}
+
 .titulo {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    padding: 0 5%;
 }
 
 .header__parrafo {
-    padding: 2% 5%;
+    padding-top: 2%;
+}
+
+.header__contacto {
+    padding-top: 2%;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.contacto__elemento {
+    color: var(--principal);
+    transition: transform 0.3s ease;
 }
 
 .fondo--naranja {
