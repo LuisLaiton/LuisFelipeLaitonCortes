@@ -140,31 +140,53 @@ hr {
 }
 
 /*--- MAIN ---*/
-.main {
-    background-color: var(--principal-oscuro);
-    color: var(--blanco-neutro);
-    display: grid;
-    grid-template-columns: 35% auto;
-    grid-auto-rows: auto;
+.fondo--patron-azul {
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='23.07' height='40' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(333, 21%, 92%, 1)'/><path d='M17.62 0l-6.07 10.5m2.74 4.76L8.22 4.75m-5.48 0h12.13M.01 0h23.07M6.07 20L0 9.5m2.74-4.75l-6.07 10.5m-5.48 0H3.33m8.2 4.75L0 .02-11.54 20m40.68 0L23.07 9.5m2.74-4.75l-6.06 10.5m-5.49 0H26.4M34.6 20L23.08.02 11.53 20m-5.46 0L0 30.51m2.74 4.75l-6.07-10.5m-5.48 0H3.33m8.2-4.75L0 40l-11.54-19.98zM17.6 40l-6.06-10.5m2.74-4.76L8.2 35.25m-5.48 0h12.13M0 40h23.07L11.54 20.01m17.6 0l-6.07 10.5m2.74 4.75l-6.06-10.5m-5.49 0H26.4M11.53 20h23.08L23.07 40'  stroke-linecap='square' stroke-width='3.5' stroke='hsla(199, 84%, 20%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    color: white;
+    padding: 30px 10%;
 }
 
-.educacion {
-    grid-column: 1;
-    grid-row: 1/3;
+.fondo--azul {
     background-color: var(--principal);
-    padding: 20% 10% 10% 10%;
+    color: white;
+    padding: 30px 10%;
 }
 
-.principal {
-    grid-column: 2 / -1;
-    grid-row: 1 / 2;
-    padding: 10% 5% 0% 5%;
+
+.tarjeta--tres {
+    width: 45%;
+    padding: 2%;
+    background-color: var(--principal-oscuro);
+    border-radius: 5px;
 }
 
-.pasatiempos {
-    grid-column: 2 / -1;
-    grid-row: 2 / 3;
-    padding: 0% 5% 5% 5%;
+/*--- MAIN exp laboral ---*/
+.exp--laboral {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.exp--laboral__tarjetas {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.exp--laboral__empresa {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.exp--laboral__tiempo {
+    text-align: end;
+}
+
+.parrafo--opaco {
+    color: var(--blanco-oscuro);
 }
 
 /*--- MAIN educacion ---*/
@@ -200,15 +222,6 @@ hr {
     color: var(--secundario);
 }
 
-/*--- MAIN exp laboral ---*/
-.exp--laboral__empresa {
-    display: inline;
-}
-
-.parrafo--opaco {
-    color: var(--blanco-oscuro);
-}
-
 /*--- MAIN pasatiempos ---*/
 .pasatiempos__enlace {
     color: var(--secundario);
@@ -239,6 +252,20 @@ hr {
 }
 
 @media screen and (max-width: 1100px) {
+    .exp--laboral__tarjetas {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    
+    .tarjeta--tres {
+        width: 100%;
+        padding: 2%;
+        background-color: var(--principal-oscuro);
+        border-radius: 5px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -282,10 +309,6 @@ hr {
         flex-direction: column;
         gap: 20px;
     }
-    
-    .header__parrafo {
-        display: none;
-    }
 
     .navBar__menu-hamburguesa {
         display: block;
@@ -305,9 +328,14 @@ hr {
     }
 }
 
-@media screen and (max-width: 400px) {
-    .header__imagen {
-        float: left;
-        border-left: none;
+@media screen and (max-width: 710px) {
+    .header__parrafo {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 390px) {
+    .header__parrafo {
+        display: none;
     }
 }
