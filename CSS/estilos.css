@@ -34,22 +34,38 @@ hr {
 /*--- NAV ---*/
 
 .navBar {
-    display: none;
-    background-color: var(--negro);
-    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    background-color: var(--principal-oscuro);
+    padding: 0 2%;
     position: sticky;
     top: 0px;
     border-radius: 0px;
+}
+
+.navBar__logo {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.enfasis:hover {
+    transform: scale(1.1);
 }
 
 .navBar__menu-hamburguesa {
     display: none;
 }
 
+.navBar__menu {
+    flex-grow: 1;
+    text-align: right;
+}
+
 .navBar__enlaces {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    vertical-align: baseline;
 }
 
 .navBar__enlaces--desplegable {
@@ -66,28 +82,31 @@ hr {
 
 /*--- HEADER ---*/
 .header {
+    padding: 0 10%;
     background-color: var(--blanco-neutro);
-    display: grid;
-    grid-template-columns: 35% 1fr;
-    grid-template-rows: repeat(2, 150px);
     color: var(--negro);
+    height: 93vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
 }
 
-.header__figura {
-    grid-column: 1/2;
-    grid-row: 1/3;
+.contenedor__visible {
+    opacity: 1; /* Become visible */
 }
 
 .header__imagen {
     float: right;
     max-height: 300px;
     height: 100%;
-    border-left: 30px solid var(--secundario);
+    filter: drop-shadow(5px 5px 10px var(--blanco-oscuro));
 }
 
 .titulo {
-    grid-column: 2 / 3;
-    grid-row: 1/2;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -95,15 +114,14 @@ hr {
 }
 
 .header__parrafo {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
     padding: 2% 5%;
 }
 
 .fondo--naranja {
     display: inline;
+    padding: 2px;
     background-color: var(--secundario);
-    color: var(--negro);
+    /* color: var(--negro); */
 }
 
 /*--- MAIN ---*/
@@ -206,9 +224,6 @@ hr {
 }
 
 @media screen and (max-width: 1100px) {
-    .header {
-        grid-template-rows: 150px auto;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -249,26 +264,12 @@ hr {
     }
 
     .header {
-        grid-template-columns: 35% 1fr;
-        grid-template-rows: 150px;
+        flex-direction: column;
+        gap: 20px;
     }
-
-    .header__figura {
-        grid-row: 1/2;
-    }
-
+    
     .header__parrafo {
         display: none;
-    }
-
-    .titulo {
-        padding-bottom: 5%;
-    }
-
-    .navBar {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
     }
 
     .navBar__menu-hamburguesa {

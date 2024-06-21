@@ -3,6 +3,9 @@ const $BTN_NAVBAR = document.querySelector(".navBar__menu-hamburguesa");
 const $MENU_ENLACES = document.querySelector(".navBar__enlaces");
 const $ENLACES = document.querySelectorAll(".navBar__item");
 
+window.addEventListener('load', function() {
+    document.querySelector('.header').classList.add('contenedor__visible');
+});
 
 $DIPLOMA.forEach(element => {
     element.onclick = diploma;
