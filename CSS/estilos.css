@@ -240,16 +240,6 @@ hr {
     margin: 5%;
 }
 
-/* .certificado__detalles {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s linear, visibility 1s linear;
-}
-
-.certificado__info:hover .certificado__detalles {
-    opacity: 1;
-    visibility: visible;
-} */
 .certificado__info {
     position: relative;
     padding: 10px;
@@ -323,20 +313,14 @@ hr {
 
 @media screen and (max-width: 768px) {
     .educacion {
-        grid-column: 1/-1;
-        grid-row: 1;
         padding-top: 10%;
     }
 
     .principal {
-        grid-column: 1/-1;
-        grid-row: 2;
         padding: 10%;
     }
 
     .pasatiempos {
-        grid-column: 1/-1;
-        grid-row: 3;
         padding: 10%;
         background-color: var(--principal);
     }
@@ -354,8 +338,6 @@ hr {
     h2 {
         font-size: 1.5rem;
         display: inline;
-        position: sticky;
-        top: 10px;
     }
 
     .header {
@@ -378,6 +360,19 @@ hr {
         flex-direction: column;
         text-align: right;
         align-items: end;
+    }
+
+    .certificado__detalles {
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        background: none;
+        padding: 0;
+        color: var(--secundario);
+    }
+
+    .certificado__institucion, .certificado__figura {
+        display: none;
     }
 }
 

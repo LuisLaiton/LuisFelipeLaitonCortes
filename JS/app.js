@@ -1,4 +1,3 @@
-const $DIPLOMA = document.querySelectorAll(".mostrar--hover");
 const $BTN_NAVBAR = document.querySelector(".navBar__menu-hamburguesa");
 const $MENU_ENLACES = document.querySelector(".navBar__enlaces");
 const $ENLACES = document.querySelectorAll(".navBar__item");
@@ -6,17 +5,6 @@ const $ENLACES = document.querySelectorAll(".navBar__item");
 window.addEventListener('load', function() {
     document.querySelector('.header').classList.add('contenedor__visible');
 });
-
-$DIPLOMA.forEach(element => {
-    element.onclick = diploma;
-});
-
-function diploma(event) {
-
-    event.preventDefault();
-    const $CERTIFICADO = event.currentTarget.querySelector(".d-oculto");
-    $CERTIFICADO.classList.toggle('d-mostrar');
-}
 
 $BTN_NAVBAR.onclick = desplegar_menu;
 $ENLACES.forEach(element => {
